@@ -30,9 +30,7 @@ body {
 
 .nav-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -44,9 +42,18 @@ body {
   font-weight: bold;
 }
 
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #1da1f2;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+
 .nav-links {
   display: flex;
-  flex-direction: row;
   list-style: none;
   gap: 0.5rem;
   margin-left: auto;
@@ -90,6 +97,11 @@ body {
   color: #f4245e;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* Secondary Hero */
+.secondary-hero {
+  min-height: 60vh;
 }
 
 /* Glitch Base */
@@ -310,7 +322,10 @@ body {
 .grid-item.expanded {
   flex: 1 1 100%;
   padding: 2rem;
-  aspect-ratio: 3 / 2;
+  background: url("assets/neon-grid.jpg") no-repeat center/cover;
+  background-color: #1a2026;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* Hidden Content */
@@ -324,14 +339,6 @@ body {
 
 .grid-item.expanded .grid-item-content {
   display: flex;
-}
-
-.grid-item-content img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  object-fit: cover;
-  border: 1px solid #1da1f2;
 }
 
 .grid-item-content p {
@@ -389,6 +396,51 @@ body {
   font-size: 0.9rem;
 }
 
+/* Testimonials Section */
+.testimonials {
+  padding: 2rem;
+  background: linear-gradient(180deg, #1a2026, #0f1419);
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 1.5rem;
+  color: #1da1f2;
+  margin-bottom: 2rem;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-item {
+  flex: 1 1 100%;
+  background: #1a2026;
+  padding: 1.5rem;
+  border: 1px solid #1da1f2;
+  transition: box-shadow 0.3s ease;
+}
+
+.testimonial-item:hover {
+  box-shadow: 0 0 15px #1da1f2, 0 0 10px #f4245e;
+}
+
+.testimonial-item p {
+  color: #1da1f2;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-item h3 {
+  font-size: 1rem;
+  color: #f4245e;
+}
+
 /* Footer: Enhanced */
 .footer {
   padding: 1.5rem;
@@ -422,7 +474,35 @@ body {
   font-size: 0.8rem;
 }
 
-/* Desktop Styles (min-width for Mobile-First) */
+/* Mobile Navbar Toggle */
+@media (max-width: 600px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+  }
+}
+
+/* Desktop Styles */
 @media (min-width: 600px) {
   .nav-container {
     flex-direction: row;
@@ -447,42 +527,38 @@ body {
   }
 
   .grid-item-content {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .grid-item-content img {
-    width: 200px;
-  }
-
   .grid-item-content p {
-    text-align: left;
-    flex: 1;
+    text-align: center;
   }
 
   .service-item {
     flex: 1 1 calc(33.333% - 1rem);
   }
 
-  .services h2 {
+  .testimonial-item {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+
+  .services h2,
+  .testimonials h2 {
     font-size: 2rem;
   }
 }
 
-/* Stack logo and links if they overflow (e.g., around 400px) */
-@media (max-width: 400px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
+/* Fix Portfolio Overflow in Mobile */
+@media (max-width: 600px) {
+  .grid-item.expanded {
+    max-width: 100%;
+    padding: 1rem;
+    overflow-x: hidden;
   }
 
-  .nav-links {
-    margin-left: 0;
-    gap: 0.8rem;
-  }
-
-  .nav-links a {
-    justify-content: center;
+  .grid-item-content {
+    max-width: 100%;
   }
 }
