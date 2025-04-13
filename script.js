@@ -19,10 +19,14 @@ if (glitchElements) {
 // Navbar Toggle
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
+const toggleIcon = document.querySelector(".toggle-icon");
 
-if (navToggle && navLinks) {
+if (navToggle && navLinks && toggleIcon) {
   navToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
+    toggleIcon.textContent = navLinks.classList.contains("active")
+      ? "close"
+      : "menu";
   });
 }
 
