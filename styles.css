@@ -152,12 +152,7 @@ a:hover {
 
 /* Navbar */
 .navbar {
-  background: rgba(
-    26,
-    32,
-    38,
-    0.3
-  ); /* Adjust the alpha value (0.5) for transparency */
+  background: rgba(26, 32, 38, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: var(--space-md);
@@ -178,7 +173,7 @@ a:hover {
   color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: bold;
-  font-family: var(--font-heading); /* Uses the heading font */
+  font-family: var(--font-heading);
 }
 
 .nav-toggle {
@@ -212,6 +207,14 @@ a:hover {
   list-style: none;
   justify-content: flex-end;
   align-items: center;
+}
+
+.nav-links a {
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Add transition for smooth glow */
+}
+
+.nav-links a:hover {
+  text-shadow: 0 0 8px var(--primary-color); /* Add the same glow as portfolio titles */
 }
 
 /* Hero */
@@ -383,15 +386,15 @@ a:hover {
 }
 
 .service-item.design {
-  background-image: url("https://images.unsplash.com/photo-1516321310768-61f59f12b2c0");
+  background-image: url("assets/neon-octagon.webp");
 }
 
 .service-item.develop {
-  background-image: url("https://images.unsplash.com/photo-1516321310768-61f59f12b2c0");
+  background-image: url("assets/neon-grid.jpg");
 }
 
 .service-item.strategy {
-  background-image: url("https://images.unsplash.com/photo-1516321310768-61f59f12b2c0");
+  background-image: url("assets/neon-circles.webp");
 }
 
 .service-item h3 {
