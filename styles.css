@@ -146,6 +146,10 @@ a:hover {
   box-shadow: 0 0 8px var(--primary-color);
 }
 
+.button-b:hover {
+  color: var(--bg-dark); /* Ensure text stays dark on hover */
+}
+
 /* Navbar */
 .navbar {
   background: rgba(
@@ -295,7 +299,7 @@ a:hover {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.project-title:hover {
+.grid-item:hover .project-title {
   color: var(--primary-color);
   text-shadow: 0 0 8px var(--primary-color);
 }
@@ -329,7 +333,13 @@ a:hover {
   margin-bottom: var(--space-md);
   z-index: 3;
   position: relative;
-  color: var(--secondary-color);
+  color: #ffffff;
+}
+
+.grid-item-content .button-a {
+  margin-top: 0;
+  z-index: 3;
+  position: relative;
 }
 
 .grid-item-content .button-b {
@@ -428,6 +438,52 @@ a:hover {
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto var(--space-md);
+}
+
+/* Contact Section */
+.contact {
+  padding: var(--space-lg) 0;
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-dark));
+}
+
+.contact h2 {
+  margin-bottom: var(--space-md);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  color: var(--secondary-color);
+  margin-bottom: var(--space-sm);
+}
+
+.form-row input,
+.form-row textarea {
+  padding: var(--space-sm);
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+  background: var(--bg-card);
+  color: var(--text-paragraph);
+  font-family: var(--font-body);
+}
+
+.form-row textarea {
+  resize: vertical;
+}
+
+.form-submit {
+  align-items: center;
 }
 
 /* Footer */
