@@ -6,14 +6,29 @@
   --bg-dark: #0f1419; /* Body background */
   --bg-card: #1a2026; /* Card/nav background */
   --bg-frost: rgba(26, 32, 38, 0.8); /* Frosted glass */
+  --text-header: #ffffff; /* White for headers */
+  --text-paragraph: #d3d3d3; /* Light grey for paragraphs */
+
+  /* Font Settings */
+  /* To change fonts:
+     1. Update --font-heading and --font-body below with your desired font names.
+     2. Update the Google Fonts <link> in the HTML <head> to import your new fonts.
+     3. Example: To use Montserrat for headings and Open Sans for paragraphs:
+        - Change:
+          --font-heading: "Montserrat", sans-serif;
+          --font-body: "Open Sans", sans-serif;
+        - Update HTML <head>:
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+     4. Find the correct Google Fonts URL by visiting https://fonts.google.com, selecting your fonts, and copying the provided <link> tag.
+  */
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Roboto", sans-serif;
 
   /* Typography */
-  --font-heading: "Inter", sans-serif;
-  --font-body: "IBM Plex Mono", monospace;
-  --h1-size: 2rem;
-  --h2-size: 1.5rem;
-  --h3-size: 1.2rem;
-  --text-size: 0.9rem;
+  --h1-size: 1.4rem;
+  --h2-size: 1rem;
+  --h3-size: 0.9rem;
+  --text-size: 0.8rem;
   --text-small: 0.8rem;
 
   /* Spacing */
@@ -22,6 +37,11 @@
   --space-lg: 2rem;
   --space-xl: 30px;
   --padding-card: 20px 1.5rem;
+
+  /* Hero Backgrounds */
+  --hero-bg-home: url("assets/neon-oct.webp");
+  --hero-bg-secondary: url("assets/neon-grid.jpg");
+  --hero-bg-approach: url("assets/neon-spiral.webp");
 }
 
 /* Global Reset */
@@ -38,7 +58,7 @@ html {
 
 body {
   background: var(--bg-dark);
-  color: var(--secondary-color);
+  color: var(--text-paragraph);
   font-family: var(--font-body);
   font-size: var(--text-size);
   line-height: 1.4;
@@ -128,7 +148,14 @@ a:hover {
 
 /* Navbar */
 .navbar {
-  background: var(--bg-card);
+  background: rgba(
+    26,
+    32,
+    38,
+    0.3
+  ); /* Adjust the alpha value (0.5) for transparency */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: var(--space-md);
   position: sticky;
   top: 0;
@@ -147,6 +174,7 @@ a:hover {
   color: var(--primary-color);
   font-size: 1.2rem;
   font-weight: bold;
+  font-family: var(--font-heading); /* Uses the heading font */
 }
 
 .nav-toggle {
@@ -184,18 +212,35 @@ a:hover {
 
 /* Hero */
 .hero {
-  min-height: 60vh;
-  background: url("assets/neon-grid.jpg") no-repeat center/cover;
+  min-height: 72vh;
+  background: var(--hero-bg-home) no-repeat center/cover;
   display: flex;
   align-items: center;
+}
+
+.hero#secondary-hero {
+  background: var(--hero-bg-secondary) no-repeat center/cover;
+}
+
+.hero#approach {
+  background: var(--hero-bg-approach) no-repeat center/cover;
 }
 
 .hero-content {
   text-align: center;
   padding: var(--space-lg);
-  background: var(--bg-frost);
+  background: var(
+    --bg-frost,
+    rgba(26, 32, 38, 0.8)
+  ); /* Fallback to rgba(26, 32, 38, 0.8) */
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(
+    26,
+    32,
+    38,
+    0.2
+  ); /* Adjust the alpha value (0.6) for transparency */
+  -webkit-backdrop-filter: blur(5px);
   border-radius: 3px;
 }
 
@@ -218,6 +263,13 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+@supports not (aspect-ratio: 3 / 2) {
+  .grid-item {
+    height: 0;
+    padding-top: calc(2 / 3 * 100%);
+  }
 }
 
 .project-image {
