@@ -8,7 +8,6 @@
       content="IX portfolio by Mike Ching. 20+ years turning chaos into cash with design, IT, and code."
     />
     <meta name="robots" content="index, follow" />
-    <!-- Open Graph for Social Sharing -->
     <meta property="og:title" content="IX—Directed by Mike Ching" />
     <meta
       property="og:description"
@@ -17,7 +16,6 @@
     <meta property="og:image" content="assets/neon-grid.jpg" />
     <meta property="og:url" content="https://ix-site.netlify.app" />
     <meta property="og:type" content="website" />
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="IX—Directed by Mike Ching" />
     <meta
@@ -25,283 +23,303 @@
       content="Ideas to Impact. We Listen. We Build. You Win."
     />
     <meta name="twitter:image" content="assets/neon-grid.jpg" />
-    <!-- Content Security Policy -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' https://images.unsplash.com;"
     />
-    <!-- Google Material Symbols (for toggle icons only) -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
     <title>IX—Directed by Mike Ching</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=IBM+Plex+Mono:wght@400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <nav class="navbar">
-      <div class="nav-container">
-        <a href="#" class="nav-logo">IX</a>
+      <div class="container nav-container">
+        <a href="#home" class="nav-logo">IX</a>
         <button class="nav-toggle" aria-label="Toggle navigation">
-          <span class="material-symbols-outlined toggle-icon">menu</span>
+          <svg
+            class="toggle-icon"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="menu-icon"
+              d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z"
+              fill="var(--secondary-color)"
+            />
+            <path
+              class="close-icon"
+              d="M6 6L18 18M6 18L18 6"
+              stroke="var(--secondary-color)"
+              stroke-width="2"
+            />
+          </svg>
         </button>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#portfolio-heading">PORTFOLIO</a></li>
-          <li><a href="#services">SERVICES</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
 
     <section class="hero" id="home">
-      <div class="hero-content">
-        <h1 class="glitch" data-text="Ideas to Impact.">Ideas to Impact.</h1>
+      <div class="container hero-content">
+        <h1>Ideas to Impact.</h1>
         <p>We Listen. We Build. You Win.</p>
         <p>
           20+ years turning chaos into cash. Design wisdom. IT guts. Code that
           works.
         </p>
-        <a href="https://calendly.com/example" class="cta-btn" target="_blank"
+        <a href="https://calendly.com/example" class="button-a" target="_blank"
           >Talk Now</a
         >
       </div>
     </section>
 
     <section class="portfolio" id="portfolio">
-      <h2 id="portfolio-heading">Been There, Crushed That</h2>
-      <div class="grid-container">
-        <article class="grid-item" data-project="telstra">
-          <img
-            src="assets/portfolio-cover/cab.jpg"
-            alt="Digital network abstract"
-            class="project-image"
-          />
-          <a href="#" class="project-title">Telstra Digital Spine</a>
-          <div class="grid-item-content">
-            <p>
-              Revamped Telstra's digital infrastructure for seamless user
-              experiences.
-            </p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
-        <article class="grid-item" data-project="hilton">
-          <img
-            src="assets/portfolio-cover/yacht.jpg"
-            alt="Neon cityscape"
-            class="project-image"
-          />
-          <a href="#" class="project-title">Hilton Vibe</a>
-          <div class="grid-item-content">
-            <p>
-              Crafted a slick digital presence for Hilton to enhance guest
-              engagement.
-            </p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
-        <article class="grid-item" data-project="cba">
-          <img
-            src="assets/portfolio-cover/pyramid.jpg"
-            alt="Futuristic interface"
-            class="project-image"
-          />
-          <a href="#" class="project-title">CBA Edge</a>
-          <div class="grid-item-content">
-            <p>
-              Delivered a cutting-edge digital solution for Commonwealth Bank of
-              Australia.
-            </p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
-        <article class="grid-item" data-project="hp">
-          <img
-            src="assets/portfolio-cover/software.jpg"
-            alt="Tech circuit board"
-            class="project-image"
-          />
-          <a href="#" class="project-title">HP Realness</a>
-          <div class="grid-item-content">
-            <p>
-              Brought HP's digital platforms to life with practical,
-              user-focused design.
-            </p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
-        <article class="grid-item" data-project="startup-chaos-fix">
-          <img
-            src="assets/portfolio-cover/zhai.jpg"
-            alt="Digital startup abstract"
-            class="project-image"
-          />
-          <a href="#" class="project-title">Startup Chaos Fix</a>
-          <div class="grid-item-content">
-            <p>
-              Helped a startup streamline their digital presence and operations.
-            </p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
-        <article class="grid-item" data-project="app-launch-blast">
-          <img
-            src="assets/portfolio-cover/beauty.jpg"
-            alt="Mobile app interface"
-            class="project-image"
-          />
-          <a href="#" class="project-title">App Launch Blast</a>
-          <div class="grid-item-content">
-            <p>
-              Supported a successful app launch with robust digital solutions.
-            </p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
-        <article class="grid-item" data-project="site-overhaul">
-          <img
-            src="assets/portfolio-cover/upkeep.jpg"
-            alt="Website redesign abstract"
-            class="project-image"
-          />
-          <a href="#" class="project-title">Site Overhaul</a>
-          <div class="grid-item-content">
-            <p>
-              Transformed an outdated website into a modern, user-friendly
-              platform.
-            </p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
-        <article class="grid-item" data-project="digital-pivot">
-          <img
-            src="assets/portfolio-cover/iform.jpg"
-            alt="Digital transformation abstract"
-            class="project-image"
-          />
-          <a href="#" class="project-title">Digital Pivot</a>
-          <div class="grid-item-content">
-            <p>Guided a business through a complete digital transformation.</p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
-        <article class="grid-item" data-project="game-changer">
-          <img
-            src="assets/portfolio-cover/fhiit.jpg"
-            alt="Innovative tech abstract"
-            class="project-image"
-          />
-          <a href="#" class="project-title">Game Changer</a>
-          <div class="grid-item-content">
-            <p>
-              Delivered a groundbreaking digital solution that redefined the
-              client’s market presence.
-            </p>
-            <a href="#" class="cta-btn project-details-btn">View Details</a>
-          </div>
-        </article>
+      <div class="container">
+        <h2>Been There, Crushed That</h2>
+        <div class="grid-container">
+          <article class="card grid-item" data-project="telstra">
+            <img
+              src="assets/portfolio-cover/cab.jpg"
+              alt="Digital network abstract"
+              class="project-image"
+            />
+            <a href="#" class="project-title">Telstra Digital Spine</a>
+            <div class="grid-item-content">
+              <p>
+                Revamped Telstra's digital infrastructure for seamless user
+                experiences.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+          <article class="card grid-item" data-project="hilton">
+            <img
+              src="assets/portfolio-cover/yacht.jpg"
+              alt="Neon cityscape"
+              class="project-image"
+            />
+            <a href="#" class="project-title">Hilton Vibe</a>
+            <div class="grid-item-content">
+              <p>
+                Crafted a slick digital presence for Hilton to enhance guest
+                engagement.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+          <article class="card grid-item" data-project="cba">
+            <img
+              src="assets/portfolio-cover/pyramid.jpg"
+              alt="Futuristic interface"
+              class="project-image"
+            />
+            <a href="#" class="project-title">CBA Edge</a>
+            <div class="grid-item-content">
+              <p>
+                Delivered a cutting-edge digital solution for Commonwealth Bank
+                of Australia.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+          <article class="card grid-item" data-project="hp">
+            <img
+              src="assets/portfolio-cover/software.jpg"
+              alt="Tech circuit board"
+              class="project-image"
+            />
+            <a href="#" class="project-title">HP Realness</a>
+            <div class="grid-item-content">
+              <p>
+                Brought HP's digital platforms to life with practical,
+                user-focused design.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+          <article class="card grid-item" data-project="startup-chaos-fix">
+            <img
+              src="assets/portfolio-cover/zhai.jpg"
+              alt="Digital startup abstract"
+              class="project-image"
+            />
+            <a href="#" class="project-title">Startup Chaos Fix</a>
+            <div class="grid-item-content">
+              <p>
+                Helped a startup streamline their digital presence and
+                operations.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+          <article class="card grid-item" data-project="app-launch-blast">
+            <img
+              src="assets/portfolio-cover/beauty.jpg"
+              alt="Mobile app interface"
+              class="project-image"
+            />
+            <a href="#" class="project-title">App Launch Blast</a>
+            <div class="grid-item-content">
+              <p>
+                Supported a successful app launch with robust digital solutions.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+          <article class="card grid-item" data-project="site-overhaul">
+            <img
+              src="assets/portfolio-cover/upkeep.jpg"
+              alt="Website redesign abstract"
+              class="project-image"
+            />
+            <a href="#" class="project-title">Site Overhaul</a>
+            <div class="grid-item-content">
+              <p>
+                Transformed an outdated website into a modern, user-friendly
+                platform.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+          <article class="card grid-item" data-project="digital-pivot">
+            <img
+              src="assets/portfolio-cover/iform.jpg"
+              alt="Digital transformation abstract"
+              class="project-image"
+            />
+            <a href="#" class="project-title">Digital Pivot</a>
+            <div class="grid-item-content">
+              <p>
+                Guided a business through a complete digital transformation.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+          <article class="card grid-item" data-project="game-changer">
+            <img
+              src="assets/portfolio-cover/fhiit.jpg"
+              alt="Innovative tech abstract"
+              class="project-image"
+            />
+            <a href="#" class="project-title">Game Changer</a>
+            <div class="grid-item-content">
+              <p>
+                Delivered a groundbreaking digital solution that redefined the
+                client’s market presence.
+              </p>
+              <a href="#" class="button-b project-details-btn">View Details</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="hero secondary-hero" id="secondary-hero">
-      <div class="hero-content">
-        <h1 class="glitch" data-text="Your Vision, Our Craft.">
-          Your Vision, Our Craft.
-        </h1>
+      <div class="container hero-content">
+        <h1>Your Vision, Our Craft.</h1>
         <p>From concept to reality, we make it happen.</p>
         <p>Let’s build something extraordinary together.</p>
-        <a href="https://calendly.com/example" class="cta-btn" target="_blank"
+        <a href="https://calendly.com/example" class="button-a" target="_blank"
           >Get Started</a
         >
       </div>
     </section>
 
     <section class="services" id="services">
-      <h2>What We Do</h2>
-      <div class="services-container">
-        <section class="service-item">
-          <h3>Design</h3>
-          <p>
-            We craft intuitive experiences that solve real problems—turning
-            frustration into engagement and chaosindoors and outdoors.
-          </p>
-        </section>
-        <section class="service-item">
-          <h3>Develop</h3>
-          <p>
-            We build robust, scalable solutions that bring your vision to life,
-            ensuring your digital presence stands the test of time.
-          </p>
-        </section>
-        <section class="service-item">
-          <h3>Strategy</h3>
-          <p>
-            We guide your digital transformation with clear, impactful
-            strategies—leading you to dominate your market with confidence.
-          </p>
-        </section>
+      <div class="container">
+        <h2>What We Do</h2>
+        <div class="services-container">
+          <section class="card service-item design">
+            <h3>Design</h3>
+            <p>
+              We craft intuitive experiences that solve real problems—turning
+              frustration into engagement and chaos into clarity.
+            </p>
+          </section>
+          <section class="card service-item develop">
+            <h3>Develop</h3>
+            <p>
+              We build robust, scalable solutions that bring your vision to
+              life, ensuring your digital presence stands the test of time.
+            </p>
+          </section>
+          <section class="card service-item strategy">
+            <h3>Strategy</h3>
+            <p>
+              We guide your digital transformation with clear, impactful
+              strategies—leading you to dominate your market with confidence.
+            </p>
+          </section>
+        </div>
       </div>
     </section>
 
     <section class="hero approach" id="approach">
-      <div class="hero-content">
-        <h1 class="glitch" data-text="Our Approach">Our Approach</h1>
-        <p>We combine creativity and strategy to deliver results.</p>
+      <div class="container hero-content">
+        <h1>Our Approach</h1>
+        <p>We combine creativity and structure to deliver results.</p>
         <p>Your success is our mission.</p>
-        <a href="https://calendly.com/example" class="cta-btn" target="_blank"
+        <a href="https://calendly.com/example" class="button-a" target="_blank"
           >Learn More</a
         >
       </div>
     </section>
 
     <section class="testimonials" id="testimonials">
-      <h2>What Clients Say</h2>
-      <div class="testimonials-container">
-        <section class="testimonial-item">
-          <img
-            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-            alt="Jane Doe"
-            class="testimonial-image"
-          />
-          <p>
-            "IX transformed our digital presence with unmatched creativity and
-            precision. A true game-changer!"
-          </p>
-          <h3>Jane Doe, CEO of TechCorp</h3>
-        </section>
-        <section class="testimonial-item">
-          <img
-            src="https://images.unsplash.com/photo-1519085360753-afbcb1d997d9"
-            alt="John Smith"
-            class="testimonial-image"
-          />
-          <p>
-            "Mike and his team delivered beyond expectations, streamlining our
-            operations seamlessly."
-          </p>
-          <h3>John Smith, Founder of StartUpX</h3>
-        </section>
-        <section class="testimonial-item">
-          <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d877c828f2"
-            alt="Emily Brown"
-            class="testimonial-image"
-          />
-          <p>
-            "Their strategic insight and technical expertise gave us a
-            competitive edge."
-          </p>
-          <h3>Emily Brown, CMO of InnovateCo</h3>
-        </section>
+      <div class="container">
+        <h2>What Clients Say</h2>
+        <div class="testimonials-container">
+          <section class="card testimonial-item">
+            <img
+              src="assets/testimonials/Brad Franzen.png"
+              alt="Jane Doe"
+              class="testimonial-image"
+            />
+            <p>
+              "IX transformed our digital presence with unmatched creativity and
+              precision. A true game-changer!"
+            </p>
+            <h3>Jane Doe, CEO of TechCorp</h3>
+          </section>
+          <section class="card testimonial-item">
+            <img
+              src="assets/testimonials/Barbie-Lee Kirby.png"
+              alt="John Smith"
+              class="testimonial-image"
+            />
+            <p>
+              "Mike and his team delivered beyond expectations, streamlining our
+              operations seamlessly."
+            </p>
+            <h3>John Smith, Founder of StartUpX</h3>
+          </section>
+          <section class="card testimonial-item">
+            <img
+              src="assets/testimonials/Balraj Ougra.png"
+              alt="Emily Brown"
+              class="testimonial-image"
+            />
+            <p>
+              "Their strategic insight and technical expertise gave us a
+              competitive edge."
+            </p>
+            <h3>Emily Brown, CMO of InnovateCo</h3>
+          </section>
+        </div>
       </div>
     </section>
 
     <footer class="footer" id="contact">
-      <div class="footer-content">
+      <div class="container">
         <p>IX—Directed by Mike Ching</p>
         <ul class="social-links">
           <li>
