@@ -23,9 +23,21 @@ gridItems.forEach((item) => {
     content.prepend(img);
   }
   item.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (event.target.classList.contains("project-details-btn")) return;
+    // Check if the clicked element (or its parent) is an <a> tag
+    if (event.target.closest("a")) {
+      return; // Allow the default <a> behavior (navigation)
+    }
+    // If not clicking an <a> tag, toggle the card
     gridItems.forEach((i) => i !== item && i.classList.remove("expanded"));
     item.classList.toggle("expanded");
   });
 });
+
+// Back to Top Smooth Scroll
+const backToTopLink = document.querySelector(".back-to-top");
+if (backToTopLink) {
+  backToTopLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}

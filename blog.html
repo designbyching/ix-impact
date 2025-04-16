@@ -16,6 +16,17 @@
     <meta property="og:image" content="assets/hero-bg-1.jpg" />
     <meta property="og:url" content="https://ix-site.netlify.app/blog.html" />
     <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="IX Blog—Directed by Mike Ching" />
+    <meta
+      name="twitter:description"
+      content="Insights on design, IT, and code."
+    />
+    <meta name="twitter:image" content="assets/hero-bg-1.jpg" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' https://images.unsplash.com data:;"
+    />
     <title>IX Blog—Directed by Mike Ching</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,40 +37,41 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Reuse Navbar -->
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="#home" class="nav-logo">IX</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <svg
-            class="toggle-icon"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="menu-icon"
-              d="M3 6h18v2H3V6zm0 5h18v2H3v11zm0 5h18v2H3v16z"
-              fill="var(--secondary-color)"
-            />
-            <path
-              class="close-icon"
-              d="M6 6l12 12M6 18L18 6"
-              stroke="var(--secondary-color)"
-              stroke-width="2"
-            />
-          </svg>
-        </button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html#portfolio">PORTFOLIO</a></li>
-          <li><a href="index.html#services">SERVICES</a></li>
-          <li><a href="index.html#contact">CONTACT</a></li>
-          <li><a href="blog.html">BLOG</a></li>
-        </ul>
-      </div>
-    </nav>
+    <header>
+      <nav class="navbar">
+        <div class="container nav-container">
+          <a href="index.html" class="nav-logo">IX</a>
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <svg
+              class="toggle-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="menu-icon"
+                d="M3 6h18v2H3V6zm0 5h18v2H3v11zm0 5h18v2H3v16z"
+                fill="var(--secondary-color)"
+              />
+              <path
+                class="close-icon"
+                d="M6 6l12 12M6 18L18 6"
+                stroke="var(--secondary-color)"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+            <li><a href="index.html#services">SERVICES</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+            <li><a href="blog.html" class="active">BLOG</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <!-- Blog Section -->
     <section class="portfolio" id="blog">
@@ -74,7 +86,7 @@
               class="project-image"
               loading="lazy"
             />
-            <a href="post-1.html" class="project-title"
+            <a href="blog/post-1.html" class="project-title"
               >Why Your Business Needs a Digital Transformation Now</a
             >
             <div class="grid-item-content">
@@ -82,7 +94,7 @@
                 Discover why digital transformation is critical for your
                 business survival in today’s fast-paced world.
               </p>
-              <a href="post-1.html" class="button-a project-details-btn"
+              <a href="blog/post-1.html" class="button-a project-details-btn"
                 >Read More</a
               >
             </div>

@@ -35,39 +35,42 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container nav-container">
-        <a href="#home" class="nav-logo">IX</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-          <svg
-            class="toggle-icon"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              class="menu-icon"
-              d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z"
-              fill="var(--secondary-color)"
-            />
-            <path
-              class="close-icon"
-              d="M6 6L18 18M6 18L18 6"
-              stroke="var(--secondary-color)"
-              stroke-width="2"
-            />
-          </svg>
-        </button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#portfolio">PORTFOLIO</a></li>
-          <li><a href="#services">SERVICES</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-          <li><a href="blog.html">BLOG</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!-- Header with Sticky Navbar -->
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="container nav-container">
+          <a href="#home" class="nav-logo">IX</a>
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <svg
+              class="toggle-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                class="menu-icon"
+                d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z"
+                fill="var(--secondary-color)"
+              />
+              <path
+                class="close-icon"
+                d="M6 6L18 18M6 18L18 6"
+                stroke="var(--secondary-color)"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <section class="hero" id="home">
       <div class="container hero-content">
@@ -77,9 +80,7 @@
           20+ years turning chaos into cash. Design wisdom. IT guts. Code that
           works.
         </p>
-        <a href="https://calendly.com/example" class="button-a" target="_blank"
-          >Talk Now</a
-        >
+        <a href="blog.html" class="button-a" target="_blank">Talk Now</a>
       </div>
     </section>
 
@@ -99,7 +100,9 @@
                 Revamped Telstra's digital infrastructure for seamless user
                 experiences.
               </p>
-              <a href="#" class="button-a project-details-btn">View Details</a>
+              <a href="blog/post-1.html" class="button-a project-details-btn"
+                >View Details</a
+              >
             </div>
           </article>
           <article class="card grid-item" data-project="hilton">
@@ -319,7 +322,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="container">
         <h2>Contact Us</h2>
@@ -388,7 +390,10 @@
           </li>
           <li><a href="https://x.com/example" target="_blank">X</a></li>
         </ul>
-        <p>© 2025 IX. No BS. Just results.</p>
+        <p>
+          © 2025 IX. No BS. Just results.
+          <a href="#home" class="back-to-top">Back to Top</a>
+        </p>
       </div>
     </footer>
 
