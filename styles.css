@@ -17,6 +17,7 @@
   --h1-size: 1.6rem;
   --h2-size: 1.2rem;
   --h3-size: 1rem;
+  --h4-size: 0.9rem;
   --text-size: 0.9rem;
   --text-small: 0.8rem;
 
@@ -83,7 +84,7 @@ body {
 
 .nav-logo {
   color: var(--primary-color);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
   font-family: var(--font-heading);
 }
@@ -140,13 +141,22 @@ h1 {
 h2 {
   font-family: var(--font-heading);
   font-size: var(--h2-size);
-  color: var(--secondary-color);
+  color: var(--text-header);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-lg);
   text-align: center;
 }
 
 h3 {
   font-family: var(--font-heading);
   font-size: var(--h3-size);
+  color: var(--primary-color);
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-size: var(--h4-size);
   color: var(--primary-color);
 }
 
@@ -396,7 +406,7 @@ a:hover {
 
 .service-item p {
   margin-top: auto;
-  font-size: var(--text-small);
+  font-size: var(--text-size);
   padding: var(--space-sm);
   display: -webkit-box;
   -webkit-line-clamp: 10;
@@ -513,7 +523,7 @@ a:hover {
 
 .logo-footer {
   color: var(--primary-color);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   font-family: var(--font-heading);
   text-decoration: none;
@@ -531,7 +541,7 @@ a:hover {
 
 .social-links {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: var(--space-md);
   list-style: none;
   margin: var(--space-sm) 0;
