@@ -483,8 +483,50 @@ a:hover {
 .footer {
   padding: var(--space-md);
   background: var(--bg-card);
-  text-align: center;
   border-radius: 3px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.logo-footer {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: var(--font-heading);
+  text-decoration: none;
+}
+
+.logo-footer:hover {
+  color: var(--secondary-color);
+}
+
+.footer-slogan {
+  font-size: var(--text-small);
+  color: var(--text-paragraph);
+  margin-top: var(--space-sm);
 }
 
 .social-links {
@@ -495,8 +537,67 @@ a:hover {
   margin: var(--space-sm) 0;
 }
 
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-links a {
+  color: var(--secondary-color);
+  font-size: var(--text-small);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 8px var(--primary-color);
+}
+
 .footer p {
   font-size: var(--text-small);
+  color: var(--text-paragraph);
+}
+
+.back-to-top {
+  color: var(--secondary-color);
+  font-size: var(--text-small);
+  margin-left: var(--space-sm);
+  transition: color 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: var(--primary-color);
+}
+
+/* Media Queries for Footer */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+
+  .footer-links li {
+    margin: 0 var(--space-sm) var(--space-sm) 0;
+  }
 }
 
 .back-to-top {
