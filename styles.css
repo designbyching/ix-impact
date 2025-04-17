@@ -3,6 +3,7 @@
   /* Colors */
   --primary-color: #f4245e; /* Pink */
   --secondary-color: #1da1f2; /* Blue */
+  --impact-color: #00ff00; /* Code Green */
   --bg-dark: #0f1419; /* Body background */
   --bg-card: #1a2026; /* Card/nav background */
   --bg-frost: rgba(26, 32, 38, 0.8); /* Frosted glass */
@@ -10,7 +11,7 @@
   --text-paragraph: #d3d3d3; /* Light grey for paragraphs */
 
   /* Font Settings */
-  --font-heading: "Inter", sans-serif;
+  --font-heading: "Special Gothic Expanded One", sans-serif;
   --font-body: "Roboto", sans-serif;
 
   /* Typography */
@@ -84,7 +85,7 @@ body {
 
 .nav-logo {
   color: var(--primary-color);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   font-family: var(--font-heading);
 }
@@ -698,7 +699,7 @@ a:hover {
 }
 
 .blog-post-header h1 {
-  font-size: calc(var(--h1-size));
+  font-size: calc(var(--h2-size));
   margin-bottom: var(--space-sm);
   color: var(--primary-color);
   word-break: break-word;
@@ -709,16 +710,18 @@ a:hover {
   font-size: var(--text-small);
   color: var(--text-paragraph);
   font-style: italic;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
 }
 
 .blog-post-image {
   width: 100%;
   max-height: 500px;
+  max-width: 800px;
   object-fit: cover;
   border-radius: 3px;
   border: 1px solid var(--secondary-color);
   box-shadow: 0 0 10px var(--secondary-color);
+  vertical-align: middle; /* Prevent baseline gap */
 }
 
 .blog-post-content {
